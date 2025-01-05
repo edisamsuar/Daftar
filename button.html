@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akses Buku Induk</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/041/954/231/small_2x/green-background-and-wallpaper-free-download-free-vector.jpg'); /* Ganti dengan URL gambar Anda */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.6); /* Transparansi hitam */
+            padding: 30px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 100px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #FFD700; /* Warna emas */
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Akses Daftar Ke Buku Induk</h1>
+        <p>
+            Akses hanya untuk Admin/Staf Dayah Madinatuddiniyah Babussalam.<br>
+            Jika Anda adalah Staf, silahkan masukkan Username dan PIN Anda.
+        </p>
+        <form onsubmit="return confirmCredentials()">
+            <input type="text" id="username" name="username" placeholder="Masukkan Username">
+            <input type="password" id="pin" name="pin" placeholder="Masukkan PIN">
+            <br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function confirmCredentials() {
+            const correctUsername = "admin"; // Ganti dengan username yang benar
+            const correctPin = "1234"; // Ganti dengan PIN yang benar
+
+            const enteredUsername = document.getElementById("username").value;
+            const enteredPin = document.getElementById("pin").value;
+
+            if (enteredUsername === correctUsername && enteredPin === correctPin) {
+                window.location.href = "https://contoh-link.com"; // Ganti dengan link tujuan
+                return false;
+            } else {
+                alert("Username atau PIN salah! Silakan coba lagi.");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
